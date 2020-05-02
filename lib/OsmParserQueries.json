@@ -1,0 +1,21 @@
+{
+    "Osmparser": {
+        "Example": "java -jar bin\\osmparser\\osmparser-0.13.jar -f RawOsmV1\\chennai_mini.osm -o CompiledGeography\\Seabeach.json -i natural=beach",
+        "JreExecutable": "java",
+        "parameter_i": 
+        {
+            "WaterBody": "natural=water",
+            "HighwayPrimary": "highway=primary",
+            "Road": "highway",
+            "Seabeach": "natural=beach",
+            "Coastline": "natural=coastline",
+            "Waterway": "waterway",
+            "River": "waterway=river",
+            "Riverbank": "waterway=riverbank"
+        }
+    },
+    "Types":
+    [
+        "Atm", "Bank", "BusStop", "Hospital", "Medical"
+    ]
+}

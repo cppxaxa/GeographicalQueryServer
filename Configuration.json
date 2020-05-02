@@ -1,0 +1,17 @@
+{
+    "RawOsmV1": {
+        "path": "RawOsmV1",
+        "versionFilename": "CurrentVersion.txt"
+    },
+    "UserPointStore": {
+        "path": "UserPointStore"
+    },
+    "CompiledGeography": {
+        "path": "CompiledGeography",
+        "versionFilename": "CurrentVersion.txt"
+    },
+    "Compilation":
+    {
+        "lowendHardware": false
+    }
+}
