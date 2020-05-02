@@ -1,23 +1,54 @@
-
+import time
 import subprocess
 import json
 import os
 
 class Compiler:
-    def __init__(self, lowendHardware):
+    def __init__(self, lowendHardware, maxProc):
         self.sequence = []
         self.lowendHardware = lowendHardware
+        self.maxProc = maxProc
 
     def addCompiler(self, compiler):
         self.sequence.append(compiler)
 
+    def addWaitAll(self):
+        self.sequence.append(WaitAllCompiler())
+
     def compile(self, inputDir, outputDir):
+        startTime = time.perf_counter()
         total = len(self.sequence)
         curr = 0
+
+        processes = []
+
         for el in self.sequence:
             curr += 1
+
+            if len(processes) >= self.maxProc:
+                for proc in processes:
+                    proc.wait()
+                processes = []
+
             print("Step {}/{}".format(curr, total))
-            el.compile(inputDir, outputDir, self.lowendHardware)
+
+            if el is not WaitAllCompiler:
+                proc = el.compile(inputDir, outputDir, self.lowendHardware)
+
+                processes.append(proc)
+            else:
+                for proc in processes:
+                    proc.wait()
+                processes = []
+        
+        if self.sequence[-1] is not WaitAllCompiler:
+            for proc in processes:
+                proc.wait()
+        
+        endTime = time.perf_counter()
+        print("Finished compilation, Elapsed time: {} seconds".format(str(endTime - startTime)))
+
+
 
 class OsmParserCompiler:
     def __init__(self, javaExec, osmparserJarPath, parameterI, outputId):
@@ -46,8 +77,23 @@ class OsmParserCompiler:
         print("   " + command)
 
         process = subprocess.Popen(command, shell=True)
-        process.wait()
+
+        if lowendHardware:
+            process.wait()
+
+        return process
         
 
+class WaitingObject:
+    def __init__(self, process = None):
+        self.process = process
+
+    def wait(self):
+        if self.process is not None:
+            self.process.wait()
+
+class WaitAllCompiler:
+    def compile(self, inputDir, outputDir, lowendHardware):
+        return WaitingObject()
 
 

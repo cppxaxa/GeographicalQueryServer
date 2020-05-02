@@ -4,8 +4,8 @@ from lib.Compiler import *
 
 class CompilerFactory:
     @staticmethod
-    def defaultCompiler(lowendHardware):
-        compiler = Compiler(lowendHardware)
+    def defaultCompiler(lowendHardware, highEndMaxAllowedProcesses):
+        compiler = Compiler(lowendHardware, highEndMaxAllowedProcesses)
 
         osmParserQueries = None
         with open("lib\\OsmParserQueries.json") as f:
@@ -16,6 +16,8 @@ class CompilerFactory:
             osmParserCompiler = OsmParserCompiler("java", "bin\\osmparser\\osmparser-0.13.jar", paramIPairs[k], k)
             compiler.addCompiler(osmParserCompiler)
         
+        compiler.addWaitAll()
+
         # Seabeach and coastline
         outputId = "AllCoast"
         paramI = paramIPairs["Seabeach"] + " " + paramIPairs["Coastline"]
@@ -27,6 +29,8 @@ class CompilerFactory:
         paramI = paramIPairs["River"] + " " + paramIPairs["Riverbank"]
         osmParserCompiler = OsmParserCompiler("java", "bin\\osmparser\\osmparser-0.13.jar", paramI, outputId)
         compiler.addCompiler(osmParserCompiler)
+
+        compiler.addWaitAll()
 
         return compiler
 
@@ -40,6 +44,7 @@ def compile():
     compiledGeographyCurrentVersionFile = os.path.join( \
         compiledGeographyDir, swConfig["CompiledGeography"]["versionFilename"])
     lowendHardware = swConfig["Compilation"]["lowendHardware"]
+    maxAllowedProcessesOnHighEnd = swConfig["Compilation"]["maxAllowedProcessesOnHighEnd"]
 
     # Write the configuration
     version = 1
@@ -51,7 +56,7 @@ def compile():
         f.write(str(version))
 
     # Trigger the compilation
-    compiler = CompilerFactory.defaultCompiler(lowendHardware)
+    compiler = CompilerFactory.defaultCompiler(lowendHardware, maxAllowedProcessesOnHighEnd)
     compiler.compile(rawOsmV1Dir, compiledGeographyDir)
 
 
