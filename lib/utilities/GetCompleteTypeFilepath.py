@@ -1,10 +1,9 @@
 import json
 import os
+from lib.utilities.GetSoftwareConfiguration import *
 
 def GetCompleteTypeFilepath(typeId):
-    swConfig = None
-    with open("Configuration.json") as f:
-        swConfig = json.load(f)
+    swConfig = GetSoftwareConfiguration()
     
     compiledGeographyConfig = swConfig["CompiledGeography"]
     compiledGeographyPath = compiledGeographyConfig["path"]
@@ -19,3 +18,7 @@ def GetCompleteTypeFilepath(typeId):
     completeTypeFilepath = os.path.join(compiledGeographyPath, typeFilename)
 
     return completeTypeFilepath
+
+
+
+

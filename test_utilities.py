@@ -55,15 +55,15 @@
 
 
 
-from lib.models.GeneralParameters import *
-from lib.DistanceToRoad import *
+# from lib.models.GeneralParameters import *
+# from lib.DistanceToRoad import *
 
-p = [22.090570, 84.038002]
-param = GeneralParameters(LatLon=p)
-res = DistanceToRoad(param)
+# p = [22.090570, 84.038002]
+# param = GeneralParameters(LatLon=p)
+# res = DistanceToRoad(param)
 
-print(res.distanceInKms)
-print(res.resultCoordinates)
+# print(res.distanceInKms)
+# print(res.resultCoordinates)
 
 
 
@@ -89,4 +89,30 @@ print(res.resultCoordinates)
 # print(res.distanceInKms)
 # print(res.resultCoordinates)
 
+
+
+
+# def hello(a):
+#   print("Hello", a)
+
+# from math import *
+# import concurrent.futures as futures
+
+# gE = futures.ThreadPoolExecutor(max_workers=1)
+
+# workA = gE.submit(hello, 40)
+
+#gE.shutdown()
+
+#print(workA.result())
+
+
+from lib.models.Place import *
+from lib.AddPlace import *
+import datetime
+import time
+
+lockMap = {}
+
+AddPlace(lockMap, Place("cppxaxa", [1,2], "MyBase", "RelaxingPlace", True, False, "8:00", "20:00"))
 
