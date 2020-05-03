@@ -43,6 +43,7 @@ def CoordinateToNearestCoordinateInGeoFile(point, geographyFilename):
                     minDistance = dist
                     targetx, targety = shadowx, shadowy
 
+
     if minDistance == INVALID_MAX:
         return None
 

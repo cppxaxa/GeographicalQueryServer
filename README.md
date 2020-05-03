@@ -22,6 +22,7 @@ The server requirements are as follows:
 	2. DistanceToRiver (GeneralParameters)
 	3. DistanceToNearbyWaterbody (PersonalParameters)
 	4. DistanceToHighway (GeneralParameters)
+	4. DistanceToRoad (GeneralParameters)
 	5. DistanceToRelaxingPlace (PersonalParameters)
 	6. DistanceToAtm (PersonalParameters)
 	7. DistanceToRestaurant (PersonalParameters)
@@ -40,3 +41,25 @@ The server requirements are as follows:
 - Attributes of a place = UserToken, LatLon, Name, Type, isPreferredPlace, isFavourite, PreferredTimeStart, PreferredTimeEnd
 - GeneralParameters = (UserToken, LatLon)
 - PersonalParameters = (UserToken, LatLon, isPreferred, isFavourite, CurrentTime)
+
+
+# Progress
+## Core application
+
+- [x] Compiler
+- [x] DistanceToSeabeach (GeneralParameters)
+- [x] DistanceToRiver (GeneralParameters)
+- [x] DistanceToHighway (GeneralParameters)
+- [x] DistanceToRoad (GeneralParameters)
+- [ ] DistanceToNearbyWaterbody (PersonalParameters)
+- [ ] DistanceToRelaxingPlace (PersonalParameters)
+- [ ] DistanceToAtm (PersonalParameters)
+- [ ] DistanceToRestaurant (PersonalParameters)
+- [ ] DistanceToBank (PersonalParameters)
+- [ ] DistanceToWork (PersonalParameters)
+- [ ] DistanceToBusStop (PersonalParameters)
+- [ ] DistanceToSocialPlace (PersonalParameters)
+- [ ] DistanceToHospital (PersonalParameters)
+- [ ] DistanceToMedicalCounter (PersonalParameters)
+
+

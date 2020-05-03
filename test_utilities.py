@@ -42,12 +42,51 @@
 
 
 
-from lib.models.GeneralParameters import *
-from lib.DistanceToSeabeach import *
+# from lib.models.GeneralParameters import *
+# from lib.DistanceToSeabeach import *
 
-p = [12.968538, 80.245090]
+# p = [12.968538, 80.245090]
+# param = GeneralParameters(LatLon=p)
+# res = DistanceToSeabeach(param)
+
+# print(res.distanceInKms)
+# print(res.resultCoordinates)
+
+
+
+
+from lib.models.GeneralParameters import *
+from lib.DistanceToRoad import *
+
+p = [22.090570, 84.038002]
 param = GeneralParameters(LatLon=p)
-res = DistanceToSeabeach(param)
+res = DistanceToRoad(param)
 
 print(res.distanceInKms)
 print(res.resultCoordinates)
+
+
+
+
+# from lib.models.GeneralParameters import *
+# from lib.DistanceToHighway import *
+
+# p = [22.090570, 84.038002]
+# param = GeneralParameters(LatLon=p)
+# res = DistanceToHighway(param)
+
+# print(res.distanceInKms)
+# print(res.resultCoordinates)
+
+
+# from lib.models.GeneralParameters import *
+# from lib.DistanceToRiver import *
+
+# p = [22.090570, 84.038002]
+# param = GeneralParameters(LatLon=p)
+# res = DistanceToRiver(param)
+
+# print(res.distanceInKms)
+# print(res.resultCoordinates)
+
+
