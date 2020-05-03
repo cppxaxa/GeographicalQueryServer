@@ -49,6 +49,35 @@ class Compiler:
         print("Finished compilation, Elapsed time: {} seconds".format(str(endTime - startTime)))
 
 
+class PlaceToFileMappingCompiler:
+  def __init__(self, compiledGeographyMetadataFilename):
+    self.compiledGeographyMetadataFilename = compiledGeographyMetadataFilename
+
+  def compile(self, inputDir, outputDir, lowendHardware):
+    completeGeographyOutputFilename = os.path.join(outputDir, self.compiledGeographyMetadataFilename)
+
+    mapping = {
+        "Types": ["Coast", "River", "OnlyCoastline", "HighwayPrimary", "OnlyRiver", \
+            "OnlyRiverbank", "Road", "OnlySeabeach", "Waterbody", "Waterway"], 
+        "Mapping": {
+            "Coast": "AllCoast.json",
+            "River": "AllRiver.json",
+            "OnlyCoastline": "Coastline.json",
+            "HighwayPrimary": "HighwayPrimary.json",
+            "OnlyRiver": "River.json",
+            "OnlyRiverbank": "Riverbank.json",
+            "Road": "Road,json",
+            "OnlySeabeach": "Seabeach.json",
+            "Waterbody": "WaterBody.json",
+            "Waterway": "Waterway.json"
+        }
+    }
+
+    with open(completeGeographyOutputFilename, 'w') as f:
+      f.write(json.dumps(mapping))
+    
+    return WaitingObject()
+
 
 class OsmParserCompiler:
     def __init__(self, javaExec, osmparserJarPath, parameterI, outputId):

@@ -1,14 +1,16 @@
 {
     "RawOsmV1": {
-        "path": "RawOsmV1",
+        "path": "Data/RawOsmV1",
         "versionFilename": "CurrentVersion.txt"
     },
     "UserPointStore": {
-        "path": "UserPointStore"
+        "path": "Data/UserPointStore",
+        "placesMetadata": "PlacesMetadata.json"
     },
     "CompiledGeography": {
-        "path": "CompiledGeography",
-        "versionFilename": "CurrentVersion.txt"
+        "path": "Data/CompiledGeography",
+        "versionFilename": "CurrentVersion.txt",
+        "geographyMetadata": "GeographyMetadata.json"
     },
     "Compilation":
     {

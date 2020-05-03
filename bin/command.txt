@@ -1,0 +1,24 @@
+java -jar osmparser-0.13.jar -f d:\map.osm -i sidewalk ford tracktype lit passing_places incline embedded_rails sac_scale lanes bicycle_road winter_road junction Link surface trail_visibility mountain_pass highway overtaking busway tactile_paving ice_road traffic_calming parking cycleway service motorroad smoothness Lifecycle roads driving_side emergency abutters turn -o graph.json
+
+SyncThreads in Compilers queue - to wait for all the threads
+
+
+Input\results_50000.json,0.21384609542566596
+
+F:\users\Thirumal\results_json_generation\Kla
+
+Input\results_100000.json,0.5776134068849464
+
+F:\users\Thirumal\results_json_generation\Kla
+
+Input\results_500000.json,2.0708629030984946
+
+F:\users\Thirumal\results_json_generation\Kla
+
+Input\results_1000000.json,3.9107878780638385
+
+Input\results_1500000.json,6.0965409721425186
+
+Input\results_2500000.json,9.775874228960328
+
+

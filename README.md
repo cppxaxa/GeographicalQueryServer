@@ -36,7 +36,7 @@ The server requirements are as follows:
 
 # Abbreviation
 
-- Type = SeaBeach, Waterbody, Highway, Restaurant, RelaxingPlace, Atm, Bank, Work, BusStop, SocialPlace, Hospital, MedicalStore
+- Type = Coast, Waterbody, Highway, Restaurant, RelaxingPlace, Atm, Bank, Work, BusStop, SocialPlace, Hospital, MedicalStore
 - Attributes of a place = UserToken, LatLon, Name, Type, isPreferredPlace, isFavourite, PreferredTimeStart, PreferredTimeEnd
 - GeneralParameters = (UserToken, LatLon)
 - PersonalParameters = (UserToken, LatLon, isPreferred, isFavourite, CurrentTime)

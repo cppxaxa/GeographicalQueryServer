@@ -4,8 +4,10 @@ from lib.Compiler import *
 
 class CompilerFactory:
     @staticmethod
-    def defaultCompiler(lowendHardware, highEndMaxAllowedProcesses):
+    def defaultCompiler(lowendHardware, highEndMaxAllowedProcesses, placeToFileMapplingOutputFile):
         compiler = Compiler(lowendHardware, highEndMaxAllowedProcesses)
+
+        compiler.addCompiler(PlaceToFileMappingCompiler(placeToFileMapplingOutputFile))
 
         osmParserQueries = None
         with open("lib\\OsmParserQueries.json") as f:
@@ -45,6 +47,7 @@ def compile():
         compiledGeographyDir, swConfig["CompiledGeography"]["versionFilename"])
     lowendHardware = swConfig["Compilation"]["lowendHardware"]
     maxAllowedProcessesOnHighEnd = swConfig["Compilation"]["maxAllowedProcessesOnHighEnd"]
+    geographyMetadata = swConfig["CompiledGeography"]["geographyMetadata"]
 
     # Write the configuration
     version = 1
@@ -56,7 +59,8 @@ def compile():
         f.write(str(version))
 
     # Trigger the compilation
-    compiler = CompilerFactory.defaultCompiler(lowendHardware, maxAllowedProcessesOnHighEnd)
+    compiler = CompilerFactory.defaultCompiler(lowendHardware, \
+        maxAllowedProcessesOnHighEnd, geographyMetadata)
     compiler.compile(rawOsmV1Dir, compiledGeographyDir)
 
 
