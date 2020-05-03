@@ -10,32 +10,44 @@
 
 
 # # GeoJSON format
-# geojsonTemplate = '''
-#     {
-#       "type": "Feature",
-#       "properties": {},
-#       "geometry": {
-#         "type": "LineString",
-#         "coordinates": [
-#           [{}, {}], [{}, {}]
-#         ]
-#       }
-#     }
-# '''
+# geojsonTemplate = 
+'''
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [{}, {}], [{}, {}]
+        ]
+      }
+    }
+'''
 # #print(geojsonTemplate.format(py, px, targety, targetx))
 
-import os
-import json
-from lib.Compiler import *
+
+
+
+
+
+# import os
+# import json
+# from lib.Compiler import *
 
     
-c = PlaceToFileMappingCompiler("ABC.json")
-c.compile("abc", "CompiledGeography", False)
+# c = PlaceToFileMappingCompiler("ABC.json")
+# c.compile("abc", "CompiledGeography", False)
 
 
 
 
 
+from lib.models.GeneralParameters import *
+from lib.DistanceToSeabeach import *
 
+p = [12.968538, 80.245090]
+param = GeneralParameters(LatLon=p)
+res = DistanceToSeabeach(param)
 
-
+print(res.distanceInKms)
+print(res.resultCoordinates)

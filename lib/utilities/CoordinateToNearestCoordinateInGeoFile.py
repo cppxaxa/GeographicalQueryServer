@@ -3,12 +3,7 @@ from lib.utilities.IsPointLieOnLineSegment import *
 from lib.utilities.PointToLineCoordinates import *
 from lib.utilities.PointToPointDistance import *
 from lib.utilities.DistanceInMetersBetweenGeographicCoordinates import *
-
-class CoordinateToNearestCoordinateInGeoFileResult:
-    def __init__(self):
-        self.distanceInKms = 0
-        self.queryCoordinates = None
-        self.resultCoordinates = None
+from lib.models.CoordinateToNearestCoordinateInGeoFileResult import *
 
 # Sample point 12.969754, 80.249700 and file AllCoast.json
 def CoordinateToNearestCoordinateInGeoFile(point, geographyFilename):

@@ -15,6 +15,6 @@
     "Compilation":
     {
         "lowendHardware": false,
-        "maxAllowedProcessesOnHighEnd": 2
+        "maxAllowedProcessesOnHighEnd": 100
     }
 }
