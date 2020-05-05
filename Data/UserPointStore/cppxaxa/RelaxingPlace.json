@@ -1,3 +1,0 @@
-{"LatLon": [1, 2], "IsFavourite": false, "PreferredTimeStart": "8:00", "IsPreferredPlace": true, "PreferredTimeEnd": "20:00", "Type": "RelaxingPlace", "Name": "MyBase", "UserToken": "cppxaxa"}{"Type": "RelaxingPlace", "IsFavourite": false, "Name": "MyBase", "LatLon": [1, 2], "PreferredTimeEnd": "20:00", "IsPreferredPlace": true, "UserToken": "cppxaxa", "PreferredTimeStart": "8:00"}
-{"IsPreferredPlace": true, "Type": "RelaxingPlace", "LatLon": [1, 2], "IsFavourite": false, "UserToken": "cppxaxa", "PreferredTimeEnd": "20:00", "PreferredTimeStart": "8:00", "Name": "MyBase"}
-{"PreferredTimeEnd": "20:00", "Name": "MyBase", "LatLon": [1, 2], "IsFavourite": false, "Type": "RelaxingPlace", "PreferredTimeStart": "8:00", "UserToken": "cppxaxa", "IsPreferredPlace": true}

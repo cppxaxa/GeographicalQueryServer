@@ -1,6 +1,6 @@
 
 import os
-from lib.utilities.GetSoftwareConfiguration import *
+from lib.utilities.GetCompleteUserPointTypeFilepath import *
 from lib.utilities.UpdateLockMap import *
 
 def AddPlace(lockMap, place):
@@ -14,7 +14,7 @@ def AddPlace(lockMap, place):
         os.mkdir(userDir)
 
     type = place.Type
-    completeFileStorePath = os.path.join(userDir, type + ".json")
+    completeFileStorePath = GetCompleteUserPointTypeFilepath(userId, type)
 
     lockMap = UpdateLockMap(lockMap, userId, type)
     with lockMap[userId][type]:

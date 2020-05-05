@@ -112,7 +112,16 @@ from lib.AddPlace import *
 import datetime
 import time
 
+from lib.DistanceToPlaceByPersonalParameters import *
+from lib.models.PersonalParameters import *
+
 lockMap = {}
 
 AddPlace(lockMap, Place("cppxaxa", [1,2], "MyBase", "RelaxingPlace", True, False, "8:00", "20:00"))
+AddPlace(lockMap, Place("cppxaxa", [5,9], "MyBase 2", "RelaxingPlace", True, False, "8:00", "20:00"))
+AddPlace(lockMap, Place("cppxaxa", [10, 15], "MyBase 2", "RelaxingPlace", True, False, "8:00", "20:00"))
 
+res = DistanceToPlaceByPersonalParameters("RelaxingPlace", PersonalParameters("cppxaxa", [6,8]))
+
+print(res.queryCoordinates)
+print(res.resultCoordinates)

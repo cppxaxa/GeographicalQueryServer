@@ -2,7 +2,7 @@ import json
 import os
 from lib.utilities.GetSoftwareConfiguration import *
 
-def GetCompleteTypeFilepath(typeId):
+def GetCompleteGeoTypeFilepath(typeId):
     swConfig = GetSoftwareConfiguration()
     
     compiledGeographyConfig = swConfig["CompiledGeography"]
