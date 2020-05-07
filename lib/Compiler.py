@@ -58,7 +58,7 @@ class PlaceToFileMappingCompiler:
 
     mapping = {
         "Types": ["Coast", "River", "OnlyCoastline", "HighwayPrimary", "OnlyRiver", \
-            "OnlyRiverbank", "Road", "OnlySeabeach", "Waterbody", "Waterway"], 
+            "OnlyRiverbank", "Road", "OnlySeabeach", "Waterbody", "Waterway", "RoadCurve"], 
         "Mapping": {
             "Coast": "AllCoast.json",
             "River": "AllRiver.json",
@@ -69,7 +69,8 @@ class PlaceToFileMappingCompiler:
             "Road": "Road,json",
             "OnlySeabeach": "Seabeach.json",
             "Waterbody": "WaterBody.json",
-            "Waterway": "Waterway.json"
+            "Waterway": "Waterway.json",
+            "RoadCurve": "RoadCurve.json"
         }
     }
 

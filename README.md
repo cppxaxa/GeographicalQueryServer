@@ -32,16 +32,22 @@ The server requirements are as follows:
 	11. DistanceToSocialPlace (PersonalParameters)
 	12. DistanceToHospital (PersonalParameters)
 	13. DistanceToMedicalCounter (PersonalParameters)
+	14. ListNoSpeedGeoPointByVectors (PersonalVector[])
+	15. ListNoSpeedGeoPoint (PersonalParameters)
+	16. AddNoSpeedGeoPointByVectors (PersonalVector[])
+	17. AddNoSpeedGeoPointByVector (PersonalVector)
+	18. AddNoSpeedGeoPoint (PersonalParameters)
 5. ListNearbyPlaces (UserToken, LatLon, Type[], Radius, Limit=10)
-6. SearchPlaceByName (UserToken, namePattern)
+6. ListNearbyPlacesByVectors (PersonalVector[])
+7. SearchPlaceByName (UserToken, namePattern)
 
 # Abbreviation
 
-- Type = Coast, Waterbody, Highway, Restaurant, RelaxingPlace, Atm, Bank, Work, BusStop, SocialPlace, Hospital, MedicalStore
+- Type = Coast, Waterbody, Highway, Road, RoadCurve, Restaurant, RelaxingPlace, Atm, Bank, Work, BusStop, SocialPlace, Hospital, MedicalStore, NoSpeedGeoPoint
 - Attributes of a place = UserToken, LatLon, Name, Type, isPreferredPlace, isFavourite, PreferredTimeStart, PreferredTimeEnd
 - GeneralParameters = (UserToken, LatLon)
 - PersonalParameters = (UserToken, LatLon, isPreferred, isFavourite, CurrentTime)
-
+- PersonalVector = (UserToken, FirstLatLon, SecondLatLon)
 
 # Progress
 ## Core application
@@ -65,5 +71,8 @@ The server requirements are as follows:
 - [ ] DistanceToSocialPlace (PersonalParameters)
 - [ ] DistanceToHospital (PersonalParameters)
 - [ ] DistanceToMedicalCounter (PersonalParameters)
-
-
+- [ ] ListNoSpeedGeoPointByVectors (PersonalVector[])
+- [ ] ListNoSpeedGeoPoint (PersonalParameters)
+- [ ] AddNoSpeedGeoPointByVectors (PersonalVector[])
+- [ ] AddNoSpeedGeoPointByVector (PersonalVector)
+- [ ] AddNoSpeedGeoPoint (PersonalParameters)

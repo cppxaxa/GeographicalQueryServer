@@ -1,3 +1,3 @@
 {
-    "UserSpecificPlace": ["Restaurant", "RelaxingPlace", "Atm", "Bank", "Work", "BusStop", "SocialPlace", "Hospital", "MedicalStore", "CurrentTarget"]
+    "UserSpecificPlace": ["Restaurant", "RelaxingPlace", "Atm", "Bank", "Work", "BusStop", "SocialPlace", "Hospital", "MedicalStore", "CurrentTarget", "NoSpeedGeoPoint"]
 }
