@@ -134,40 +134,69 @@
 
 
 
-from lib.models.Place import *
-from lib.AddPlace import *
-import datetime
-import time
+# from lib.models.Place import *
+# from lib.AddPlace import *
+# import datetime
+# import time
 
-from lib.DistanceToPlaceByPersonalParameters import *
+# from lib.DistanceToPlaceByPersonalParameters import *
+# from lib.models.PersonalParameters import *
+# from lib.models.NearbyLatLon import *
+
+# from lib.DeleteNearbyPlaceByCoordinates import *
+
+# lockMap = {}
+
+# if os.path.exists("Data/UserPointStore/cppxaxa/RelaxingPlace.txt"):
+#   os.remove("Data/UserPointStore/cppxaxa/RelaxingPlace.txt")
+
+# AddPlace(lockMap, Place("cppxaxa", [1,2], "MyBase", "RelaxingPlace", True, False, "8:00", "20:00"))
+
+# res = DistanceToPlaceByPersonalParameters("RelaxingPlace", PersonalParameters("cppxaxa", [6,8]))
+
+# if res is not None:
+#   print(res.queryCoordinates)
+#   print(res.resultCoordinates)
+# else:
+#   print('None')
+
+# DeleteNearbyPlaceByCoordinates(lockMap, "cppxaxa", "RelaxingPlace", NearbyLatLon([1.0001, 2.0001], 10000))
+
+# res = DistanceToPlaceByPersonalParameters("RelaxingPlace", PersonalParameters("cppxaxa", [6,8]))
+
+# print()
+# if res is not None:
+#   print(res.queryCoordinates)
+#   print(res.resultCoordinates)
+# else:
+#   print('None')
+
+
+
+
+
+
+# from lib.models.Place import *
+# from lib.AddPlace import *
+# import datetime
+# import time
+# from lib.DistanceToPlaceByPersonalParameters import *
+# from lib.models.PersonalParameters import *
+# lockMap = {}
+# AddPlace(lockMap, Place("cppxaxa", [1,2], "MyBase", "RelaxingPlace", True, False, "8:00", "20:00"))
+# AddPlace(lockMap, Place("cppxaxa", [5,9], "MyBase 2", "RelaxingPlace", True, False, "8:00", "20:00"))
+# AddPlace(lockMap, Place("cppxaxa", [10, 15], "MyBase 2", "RelaxingPlace", True, False, "8:00", "20:00"))
+
+
+from lib.DistanceToRelaxingPlace import *
 from lib.models.PersonalParameters import *
-from lib.models.NearbyLatLon import *
 
-from lib.DeleteNearbyPlaceByCoordinates import *
-
-lockMap = {}
-
-if os.path.exists("Data/UserPointStore/cppxaxa/RelaxingPlace.txt"):
-  os.remove("Data/UserPointStore/cppxaxa/RelaxingPlace.txt")
-
-AddPlace(lockMap, Place("cppxaxa", [1,2], "MyBase", "RelaxingPlace", True, False, "8:00", "20:00"))
-
-res = DistanceToPlaceByPersonalParameters("RelaxingPlace", PersonalParameters("cppxaxa", [6,8]))
+res = DistanceToRelaxingPlace(PersonalParameters("cppxaxa", [0, 1]))
 
 if res is not None:
   print(res.queryCoordinates)
   print(res.resultCoordinates)
+  print(res.distanceInKms)
 else:
   print('None')
-
-DeleteNearbyPlaceByCoordinates(lockMap, "cppxaxa", "RelaxingPlace", NearbyLatLon([1.0001, 2.0001], 10000))
-
-res = DistanceToPlaceByPersonalParameters("RelaxingPlace", PersonalParameters("cppxaxa", [6,8]))
-
-print()
-if res is not None:
-  print(res.queryCoordinates)
-  print(res.resultCoordinates)
-else:
-  print('None')
-
+  
