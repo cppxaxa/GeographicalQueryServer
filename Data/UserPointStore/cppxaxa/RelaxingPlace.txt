@@ -1,3 +1,0 @@
-{"Name": "MyBase", "Type": "RelaxingPlace", "LatLon": [1, 2], "UserToken": "cppxaxa", "PreferredTimeEnd": "20:00", "PreferredTimeStart": "8:00", "IsPreferredPlace": true, "IsFavourite": false}
-{"Name": "MyBase 2", "Type": "RelaxingPlace", "LatLon": [5, 9], "UserToken": "cppxaxa", "PreferredTimeEnd": "20:00", "PreferredTimeStart": "8:00", "IsPreferredPlace": true, "IsFavourite": false}
-{"Name": "MyBase 2", "Type": "RelaxingPlace", "LatLon": [10, 15], "UserToken": "cppxaxa", "PreferredTimeEnd": "20:00", "PreferredTimeStart": "8:00", "IsPreferredPlace": true, "IsFavourite": false}
