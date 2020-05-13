@@ -76,10 +76,10 @@ The server requirements are as follows:
 - [x] DistanceToHospital (PersonalParameters)
 - [x] DistanceToMedicalStore (PersonalParameters)
 - [x] DistanceToCurrentDestination (PersonalParameters)
-- [ ] * ListNearbyPlace (UserToken, Type, nearbyLatLon)
 - [ ] ListNoSpeedGeoPointByVectors (PersonalVector[])
 - [ ] * ListNearbyNoSpeedGeoPoint (UserToken, nearbyLatLon)
 - [ ] AddNoSpeedGeoPointByVectors (PersonalVector[])
 - [ ] AddNoSpeedGeoPointByVector (PersonalVector)
 - [x] AddNoSpeedGeoPoint (UserToken, LatLon)
 - [x] DeleteNoSpeedGeoPoint (UserToken, nearbyLatLon)
+- [ ] * Expose REST API
